@@ -1,0 +1,34 @@
+div{
+    /* border: 2px solid red */
+}
+img{
+    width: 35px;
+}
+table{
+    box-shadow: 2px 2px 2px;
+}
+table,
+td {
+    border: 1px solid darkgreen;
+}
+h1{
+    color: darkgreen;
+    text-shadow: 1px 1px 1px;
+}
+h2{
+    color: darkgreen;
+    text-shadow: 1px 1px 1px;
+}
+thead,
+tfoot {
+    background-color: darkgreen;
+    color: #fff;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

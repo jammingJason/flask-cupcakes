@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+<title>{% block title %}Cupcakes{% endblock %}</title>
+{% block content %}
+
+<div class="div row">
+    <div class=" div col-12 text-center">
+        <h1>Cupcakes</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 m-2">
+        <table width="50%" class="center">
+            <thead>
+                <th>
+                </th>
+                <th>
+                    Flavor
+                </th>
+                <th>
+                    Size
+                </th>
+                <th>
+                    Rating
+                </th>
+            </thead>
+            <tbody id="ccHolder">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <h2>New Cupcake</h2>
+    </div>
+</div>
+<form action="/api/cupcakes" method="post" id="frmMain">
+    <div class="row">
+        <div class="col-6 text-end">Flavor : </div>
+        <div class="col-6"><input type="text" id="ccFlavor" required></div>
+    </div>
+    <div class="row">
+        <div class="col-6 text-end">Size : </div>
+        <div class="col-6"><select name="ccSize" id="ccSize">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select></div>
+    </div>
+    <div class="row">
+        <div class="col-6 text-end">Image URL : </div>
+        <div class="col-6"><input type="text" id="ccImage" required></div>
+    </div>
+    <div class="row">
+        <div class="col-6 text-end">Rating : </div>
+        <div class="col-6"><input type="text" id="ccRating" required></div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <button type="button" class="btn btn-success m-2" onclick="javascript:addCupcake()">Add New Cupcake</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
